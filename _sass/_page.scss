@@ -110,52 +110,42 @@
 .page__hero {
   position: relative;
   margin-bottom: 2em;
+  padding: 1em 0; /* Adjust padding for the height */
+  background: no-repeat center center/cover;
+  //background: url('/images/about_me_banner.jpg') no-repeat center center/cover; /* Add background image */
+  color: white; /* Text color */
   @include clearfix;
   animation: intro 0.3s both;
   animation-delay: 0.25s;
 
   &--overlay {
-    position: relative;
-    margin-bottom: 2em;
-    padding: 3em 0;
-    @include clearfix;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation: intro 0.3s both;
-    animation-delay: 0.25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Make sure the overlay covers the entire hero section */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 30px; /* Padding on the left for text alignment */
+    padding-right: 30px; /* Optional: Padding for balance on the right */
+  }
 
-    a {
-      color: #fff;
-    }
+  h1 {
+    margin: 2em;
+    font-family: $global-font-family; /* Use the global font family */
+    font-size: $type-size-2;
+    font-weight: normal;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
 
-    .wrapper {
-      padding-left: 1em;
-      padding-right: 1em;
-
-      @include breakpoint($x-large) {
-        max-width: $x-large;
-      }
-    }
-
-    .page__title,
-    .page__meta,
-    .page__lead,
-    .btn {
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(#000, 0.5);
-    }
-
-    .page__lead {
-      max-width: $medium;
-    }
-
-    .page__title {
-      font-size: $type-size-2;
-
-      @include breakpoint($small) {
-        font-size: $type-size-1;
-      }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .page__hero {
+      padding: 1.5em 0; /* Adjust padding for smaller screens */
     }
   }
 }
@@ -176,7 +166,7 @@
   font-family: $caption-font-family;
   font-size: $type-size-7;
   background: #000;
-  text-align: right;
+  text-align: left;
   z-index: 5;
   opacity: 0.5;
   border-radius: $border-radius 0 $border-radius 0;
@@ -190,6 +180,7 @@
     text-decoration: none;
   }
 }
+
 
 /*
    Social sharing
