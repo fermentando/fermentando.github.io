@@ -1,0 +1,93 @@
+/* Adding interactive tiles */
+.interactive-tiles {
+  display: flex;
+  gap: 1em; /* Adjust the spacing between tiles */
+  flex-wrap: wrap; /* Allow tiles to wrap on smaller screens */
+}
+
+.tile {
+  position: relative;
+  flex: 1 1 calc(33.333% - 1em); /* Responsive: 3 tiles per row */
+  min-width: 300px; /* Minimum tile size */
+  height: 200px; /* Adjust tile height */
+  border-radius: 0; /* Removed rounded corners for a more rectangular look */
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover; /* Ensures the background image covers the tile */
+  background-position: center; /* Centers the background image */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.tile:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Title (initially centered) */
+.tile h3 {
+  position: absolute;
+  top: 50%; /* Center the title vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centering using transform */
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  z-index: 2; /* Ensure the title is above the image */
+  transition: transform 0.3s ease; /* Smooth transition for upward shift */
+}
+
+/* Tile Content (hidden initially) */
+.tile-content {
+  position: absolute;
+  top: 50%; /* Position it below the title */
+  left: 50%;
+  transform: translate(-50%, 10%); /* Initial position below the title */
+  z-index: 1; /* Ensure it's below the title */
+  opacity: 0; /* Hide the content initially */
+  visibility: hidden; /* Hidden by default */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+.tile:hover .tile-content {
+  opacity: 1; /* Show content when hovered */
+  visibility: visible; /* Make content visible */
+  transform: translate(-50%, 5%); /* Move it down slightly on hover */
+}
+
+/* Overlay effect */
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--tile-color, rgba(0, 0, 0, 0.5)); /* Color overlay */
+  z-index: 2; /* Overlay should be above the image but below the content */
+  transition: opacity 0.3s ease;
+}
+
+.tile:hover::before {
+  opacity: 0; /* Fade out the overlay color on hover */
+}
+
+/* Title shift effect when content appears */
+.tile:hover h3 {
+  transform: translate(-50%, -90%); /* Shift the title upwards */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .tile {
+      flex: 1 1 calc(50% - 1em); /* 2 tiles per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .tile {
+      flex: 1 1 100%; /* 1 tile per row */
+  }
+}
+
