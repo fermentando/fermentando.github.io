@@ -7,13 +7,10 @@
 main:
 
   - title: "Research"
-    url: /talks/ 
+    url: /research/ 
 
-  - title: "Publications"
-    url: /publications/   
-
-  - title: "Outreach"
-    url: /teaching/    
+  - title: "Presentations"
+    url: /presentation/   
     
   - title: "CV"
     url: "/files/HidalgoPinedaCV.pdf"
