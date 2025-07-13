@@ -7,14 +7,18 @@ author_profile: true
 
 
 **How do multiphase outflows emerge in realistic ISMs?**
+
+
 ***
 
 Galaxies are vast systems composed of stars, gas, and dark matter — and their evolution is very puzzling. One reason is that feedback processes, where energy and matter flow out of galaxies in different phases, are not well understood and hard to study. These outflows start on small scales, but their combined effects can influence the galaxy on much larger scales, making the task of simulating these processes quite complex. The big question is how we can connect theoretical models with actual observations — that is, can we understand these processes, why they happen, and how they quantitatively affect galaxies and their surroundings?
 
 Some of the first attempts try to look into why this happens by making the problem extremely simplified and focusing on one question at a time. We use these simplified, ideal simulations to be able to connect theory to the behaviour of these systems — predictions that we can then compare to observations. The latest advancements on the issue of these 'multiphase outflows' precisely follow this approach. The main issue with the coexistence of cold and hot gas in outflows is that supernovae, producing the hot outflow, should entrain cold material from its surroundings before leaving the galactic disk. We know this problem as the cloud-crushing issue and it has been a puzzle for a long time: 
 
-
-![Plot description](/images/simple_multiplot.png)
+<figure>
+  <img src="/images/simple_multiplot.png" alt="wind_tunnel_sims" />
+  <figcaption>Figure 1: SN-driven outflow interaction with different ISM configurations.</figcaption>
+</figure>
 
 Picture a cloud of cold gas encountered by the wind. From instability theory, the destruction of this cloud, the cloud-crushing time $t_{cc}$, will be much shorter than the time it takes to accelerate the cloud and entrain it by the hot wind, $t_{acc}$ — for a gas of these temperatures, this is the equivalent of driving a firefighter's water hose blowing into the tube. So how can we entrain this cold phase? Gas in space also radiates energy away, which allows it to 'cool down'. If we have enough cooling strength, clouds can accrete some of the gas that would otherwise mix away during the interaction. This is, in other words, $t_{cool,mix} < t_{cc}$. This criterion gives us a critical size for cold clumps to survive the entrainment of the wind, $r_{crit}$. 
 
