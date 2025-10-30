@@ -40,5 +40,5 @@ Magnetic draping forms a protective sheath that suppresses disruptive instabilit
 
 <figure style="flex: 1;">
   <img src="/images/resized_example2.pdf" alt="ccsims with beta" style="width: 100%;" />
-  <figcaption style="text-align: center !important;">Figure 2: SN-driven outflow interaction with different ISM configurations.</figcaption>
+  <figcaption style="text-align: center !important;">Figure 3: Galactic outflow interacting with cold gas clouds with different magnetic field strengths, decreasing from top to bottom.</figcaption>
 </figure>
