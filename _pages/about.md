@@ -10,33 +10,31 @@ redirect_from:
 ---
 ***
 
-This page is under construction...
+Hello! My name is Fernando Hidalgo Pineda, I am currently a graduate student in computational astrophysics at the <a href="https://www.mpa-garching.mpg.de/" target="_blanck">Max Planck Institute for Astrophysics</a>, also working with the Max Planck Institute for Astronomy and the Astronomisches Rechen-Institut in Heidelberg. I study multiphase gas dynamics and turbulence across multiple scales and processes, including gas flows, the ISM, and the CGM, using theory and MHD simulations. In general, I am driven by fundamental questions about the origin of cold gas in hot environments and the details of the baryonic cycle, ultimately seeking to understand how galaxies form and evolve.
 
-Welcome to my webpage! I am a first-year PhD student in theoretical astrophysics at the <a href="https://www.mpa-garching.mpg.de/" target="_blanck">Max Planck Institute for Astrophysics</a>, in Munich. My research focuses on the dynamics of multiphase gas and galactic outflows, with an emphasis on understanding the interconnection of baryons across different phases — from the interstellar medium (ISM) to the circumgalactic medium (CGM) — to advance our knowledge of galaxy formation. My previous projects at the <a href="https://www.kicc.cam.ac.uk/" target="_blank">Kavli Institute for Cosmology</a>  in Cambridge, and the <a href="https://ifa.roe.ac.uk/" target="_blank">Institute for Astronomy</a> in Edinburgh worked on bridging these processes accross scales to understand galaxy and cosmological evolution.
-
-
-
-Explore the topics listed below to learn more about my research. Please feel free to get in touch!
+Here are some topics I work on. Feel free to get in touch for questions, comments, and ideas! Enjoy my humble webpage.
 
 
 
+<!--
 <div class="interactive-tiles">
-  <div class="tile" style="--tile-color: rgba(255, 0, 0, 0.5); background-image: url('/images/originalpurplestone.jpg');">
-    <h3>Tile 1</h3>
+  <div class="tile" style="--tile-color: rgba(169, 169, 169, 0.4); background-image: url('/images/soft_colours.png');">
+    <h3>Galactic winds</h3>
     <div class="tile-content">
       <p>Brief description about this tile.</p>
     </div>
   </div>
-  <div class="tile" style="--tile-color: rgba(0, 0, 255, 0.5); background-image: url('/images/bluestone.jpg');">
+  <div class="tile" style="--tile-color: rgba(176, 196, 222, 0.4); background-image: url('/images/resized_example2.pdf');">
     <h3>Tile 2</h3>
     <div class="tile-content">
       <p>Another description for this tile.</p>
     </div>
   </div>
-  <div class="tile" style="--tile-color: rgba(0, 255, 0, 0.5); background-image: url('/images/softcolours.jpg');">
+  <div class="tile" style="--tile-color: rgba(188, 170, 164, 0.4); background-image: url('/images/long_box.png');">
     <h3>Tile 3</h3>
     <div class="tile-content">
       <p>Third tile description.</p>
     </div>
   </div>
 </div>
+-->

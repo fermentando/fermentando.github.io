@@ -6,70 +6,39 @@ author_profile: true
 math: true
 ---
 
-
-**How do multiphase outflows emerge in realistic ISMs?**
-
-
-***
-
-Galaxies are vast systems composed of stars, gas, and dark matter — and their evolution is very puzzling. One reason is that feedback processes, where energy and matter flow out of galaxies in different phases, are not well understood and hard to study. These outflows start on small scales, but their combined effects can influence the galaxy on much larger scales, making the task of simulating these processes quite complex. The big question is how we can connect theoretical models with actual observations — that is, can we understand these processes, why they happen, and how they quantitatively affect galaxies and their surroundings?
-
-Some of the first attempts try to look into why this happens by making the problem extremely simplified and focusing on one question at a time. We use these simplified, ideal simulations to be able to connect theory to the behaviour of these systems — predictions that we can then compare to observations. The latest advancements on the issue of these 'multiphase outflows' precisely follow this approach. The main issue with the coexistence of cold and hot gas in outflows is that supernovae, producing the hot outflow, should entrain cold material from its surroundings before leaving the galactic disk. We know this problem as the cloud-crushing issue and it has been a puzzle for a long time: 
-
-<figure>
-  <img src="/images/simple_multiplot_volweighted.png" alt="wind_tunnel_sims" />
-  <figcaption>Figure 1: SN-driven outflow interaction with different ISM configurations.</figcaption>
-</figure>
-
-Picture a cloud of cold gas encountered by the wind. From instability theory, the destruction of this cloud, the cloud-crushing time \\( t_{cc} \\), will be much shorter than the time it takes to accelerate the cloud and entrain it by the hot wind, \\( t_{acc} \\) — for a gas of these temperatures, this is the equivalent of driving a firefighter's water hose blowing into the tube. So how can we entrain this cold phase? Gas in space also radiates energy away, which allows it to 'cool down'. If we have enough cooling strength, clouds can accrete some of the gas that would otherwise mix away during the interaction. This is, in other words, \\( t_\mathrm{cool,mix} < t_{cc} \\). This criterion gives us a critical size for cold clumps to survive the entrainment of the wind, \\( r_{crit} \\).
-
-Cool! Theory can explain these outflows from spherical clouds of gas, so what is the issue? You can imagine the interstellar medium (ISM) looks nothing like single individual clumps, but rather arranges in filamentary and multicloud structures. So we looked into this by generating realistic gas distributions and driving a wind at speeds as high as 150 km/s through it. And we get a more complex scenario, where the total amount of cold gas \\( f_v \\), size of the ISM \\( L_{ISM} \\) and sizes of clumps \\( r \\) all play a role. Varying these three quantities can lead to different mass and velocity evolution for the cold phase, and interestingly, we see that this survival also emerges for certain values of \\( f_v \\) and \\( L_{ISM} \\) even if clumps are not bigger than the classical survival threshold, hinting that the evolution for complex systems is not properly described by it.
-
-How can we understand the emergence of outflows? This is a statement about the effective depth of the ISM. In figure 2 we plot the total cold gas length perpendicular to the wind for each simulation, marking the existence or absence of cold gas in outflows, which gives us a distinct limit between crosses (absent) and circles (existent). This tells us that cold outflows will emerge universally under real galactic disks when:
+**The Launching of Galactic Winds from a Multiphase ISM**
 
 
-$$
-f_v \, L_{ISM} \geq r_{crit}
-$$
+Much of our work is dedicated to unraveling how galaxies generate powerful winds containing both hot and cold matter, phenomena that regulate a galaxy’s growth and star formation history. Observations consistently reveal that these winds are laced with cold, clumpy clouds, even though classical theory predicted rapid destruction for such fragile structures. By running high-resolution simulations, we explored how regions of cold gas embedded in a multiphase, inhomogeneous medium (the interstellar medium, or ISM) respond to being swept up by galactic winds. Our findings highlight how complex, realistic conditions actually help cold clouds survive far longer than previously assumed.
 
+Delving deeper into the physics, we found that the enduring presence of cold gas in these winds hinges on a “column density criterion”—the total quantity of cold gas along a wind’s path needs to surpass a value determined by the interplay of turbulent mixing and rapid cooling. When this condition is met, cold clouds not only survive passage but fragment and mix into a strikingly universal mass distribution: a power law with slope \\(dN/dm \\propto m^{-2}\\), known as Zipf’s law. This suggests that both turbulence and radiative cooling work in tandem to reshape the cold phase, regardless of its initial properties, as it is launched into the wind. The cold gas shatters into small filaments and droplets, dramatically increasing its covering fraction, while turbulence efficiently injects energy into every phase. Through this lens, we demonstrate how the underlying physics of entrainment, cooling, and mixing drives the large-scale appearance and long-range transport of cold gas in galactic outflows, bridging the gaps between microscopic cloud survival and the complex patterns seen by astronomical surveys.
 
-which in turn means the outflows will emerge above ISM column densities: \\(N_H \geq 10^{18} \text{cm}^{-2}\\).
-
-<figure style="text-align: center;">
-  <img 
-    src="/images/fvLism_plot_transparent.png" 
-    alt="fvLism" 
-    style="max-width: 60%; height: auto; margin: 0 auto; display: block;"
-  />
-  <figcaption style="text-align: center; font-style: italic; margin-top: 0.5em;">
-    Figure 2: Emergence (dots) or destruction (cross) of multiphase outflows for ISM parameters.
-  </figcaption>
-</figure>
-
-
-**Observing cold outflows**
-
-What can the wind tell us about the structure of the original ISM? Absolutely nothing. We show that regardless of the initial distribution of clumps, clouds in the wind follow a Zipf's distribution (\\( dN/dm \propto m^{-2} \\)) shortly after the interaction with the wind. What is puzzling is that this law emerges universally in multiphase media, like the distribution of filaments in the ISM, but we do not exactly understand why.
-
-The kinematics of outflows will show us that the phases of a multiphase wind are co-spatial and travelling at the same speeds. Both are profoundly coupled and develop turbulence only around the sound speed of cold gas. Turbulent motions for gas at \\( 10^4 \\) K are therefore transonic, whereas for the hot phase at \\( 10^6 \\) K, this is roughly equivalent to only \\( \sim 0.1 \\) % of its flow speed. Observations revealing highly turbulent X-ray emitting gas cannot purely arise from ISM interactions.
-
-<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-
-  <figure style="flex: 1 1 45%; text-align: center;">
-    <img src="/images/pdf_cdf_plot.png" alt="pdf" style="max-width: 100%; height: auto;" />
-    <figcaption>Figure 3: Cump size probability density function (top) and cumulative distribution (bottom) for the cold phase.</figcaption>
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+  <!-- Video -->
+  <figure style="flex: 1;">
+    <video controls style="width: 100%;">
+      <source src="/images/movie2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption>Figure 1: Fractal ISM interacting with a supernova-driven wind.</figcaption>
   </figure>
-
-  <figure style="flex: 1 1 45%; text-align: center;">
-    <img src="/images/yavsh_vturb_cold_hot.png" alt="yavsh" style="max-width: 100%; height: auto;" />
-    <figcaption>Figure 4: Turbulence of cold (left) and hot (right) gas in outflows as a function of time (shear timescale for wind to transverse ISM slab).</figcaption>
+  
+  <!-- Image -->
+  <figure style="flex: 1;">
+    <img src="/images/example_section.png" alt="wind_tunnel_sims" style="width: 100%;" />
+    <figcaption>Figure 2: Turbulence in a wind with both hot and cold phases.</figcaption>
   </figure>
-
 </div>
 
-Simulations also prove that while maintaining a high areal covering fraction of cold gas, the volumetric filling fraction remains well below 1. This comes to explain the ubiquitousness of cold gas in outflows and their small relative sizes, from observations of the circumgalactic medium of galaxies through quasar absorption lines, showing the high percentage of cold gas detected but their low densities.
 
-<figure>
-  <img src="/images/vsf_3x3_subplots.png" alt="wind_tunnel_sims" />
-  <figcaption>Figure 5: Velocity structure function of cold gas for 3 different simulations.</figcaption>
+
+**Radiative Cooling and Magnetic Draping**
+
+Although the positive impact of radiative cooling on cold cloud survival is well established, the combined role of magnetic fields remained unclear—previous work suggested magnetic draping could either prolong or curtail cloud lifetimes depending on the setup. We directly addressed this gap by running three-dimensional radiative MHD simulations to examine clouds in strongly magnetized galactic winds. Our findings reveal that ambient magnetic fields reduce the critical survival size by two orders of magnitude, enabling clouds smaller than 1 parsec to persist.
+
+Magnetic draping forms a protective sheath that suppresses disruptive instabilities, and pairs with radiative cooling to extend lifetimes by at least a factor of ten over purely hydrodynamic or singly-cooled cases. The joint action not only boosts cloud acceleration (to several hundred km/s) but also maintains cloud integrity over multiple kiloparsecs, matching the distances and covering fractions observed in galaxy outflows. In essence, magnetic fields and cooling together enable robust cold cloud survival under conditions where prior theory was ambivalent.
+
+<figure style="flex: 1;">
+  <img src="/images/resized_example2.pdf" alt="ccsims with beta" style="width: 100%;" />
+  <figcaption style="text-align: center !important;">Figure 2: SN-driven outflow interaction with different ISM configurations.</figcaption>
 </figure>
